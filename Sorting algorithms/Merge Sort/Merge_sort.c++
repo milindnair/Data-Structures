@@ -52,9 +52,30 @@ void merge_sort(vector<int>& arr, int start, int end) {
     }
 }
 
+
+// ----------------------------------------------------------------------------
+// For 2 way merge sort using iterative method: 
+// use this function:
+// void merge_sort(vector<int>& arr) {
+//     int n = arr.size();
+//     int start, mid, end;
+    
+//     // merge subarrays in a bottom-up manner
+//     for (int size = 1; size < n; size *= 2) {
+//         for (start = 0; start < n - 1; start += 2 * size) {
+//             mid = start + size - 1;
+//             end = min(start + 2 * size - 1, n - 1);
+//             merge(arr, start, mid, end);
+//         }
+//     }
+// }
+
+// ----------------------------------------------------------------------------
+
 int main() {
     vector<int> arr = { 5, 4, 1, 3, 2 };
     merge_sort(arr, 0, arr.size() - 1);
+    // merge_sort(arr); // for 2 way merge sort using iterative method
     
     for (int i = 0; i < arr.size(); i++) {
         cout << arr[i] << " ";
